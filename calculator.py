@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, request, flash, url_for
 calculator = Flask(__name__)
 calculator.secret_key = "sjsjdiueieuoiedpoewipoew"
 
-sum_2 = []
+# sum_2 = []
 
 @calculator.route('/')
 def home():
@@ -26,11 +26,10 @@ def sum_of_two_numbers():
         if errors:
             return render_template('calculator.html', errors=errors)
         
-        number_x = int(number_x)
-        number_y = int(number_y)
+        # number_x = int(number_x)
+        # number_y = int(number_y)
         
-        sum_2.append(number_x)
-        sum_2.append(number_y)
+        sum_2 = [int(number_x), int(number_y)]
         
         result = sum(sum_2)
         

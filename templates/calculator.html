@@ -21,12 +21,12 @@
         <form action="{{ url_for('sum_of_two_numbers') }}" method="POST">
             <div class="form-group">
                 <label for="number_x">X:</label>
-                <input type="text" name="number_x" id="number_x" required
+                <input type="number" name="number_x" id="number_x" required
                     value="{{ request.form.number_x }}">
             </div>
             <div class="form-group">
                 <label for="number_y">Y:</label>
-                <input type="text" name="number_y" id="number_y" required
+                <input type="number" name="number_y" id="number_y" required
                     value="{{ request.form.number_y }}">
             </div>
             <button type="submit" class="button">Sum</button>
